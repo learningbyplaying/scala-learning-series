@@ -38,5 +38,15 @@ object Basics extends App {
 
   println(myFunction(1,"test"))
 
+  def factorial(n: Int): Int = {
+    if (n <=1) 1
+    else n * factorial(n-1)
+  }
 
+  println( factorial(3) )
+
+
+  def myUnitReturningFunction(): = {
+    print("Test 2")
+  }
 }
