@@ -71,7 +71,9 @@ object ObjectOrientation extends App {
   object MySingleton {
     val mySpecialValue = 53278
     def mySpecialMethod():Int = 5327
-    def apply(x: Int): Int = x + 1
+    //def apply(x: Int): Int = x + 1
+
+    def apply(x: Int): Int = x + 100
   }
 
   MySingleton.mySpecialMethod()
@@ -81,4 +83,45 @@ object ObjectOrientation extends App {
   print(a,b,c)
 
 
+  object Animal {
+    val canLiveIndefinitely = false
+  }
+
+  val animalsCanLiveForever = Animal.canLiveIndefinitely
+
+  print(animalsCanLiveForever)
+  println("\n")
+
+  case class Person(name:String, age:Int)
+  val bob = new Person("Bob", 54)
+
+  println(bob)
+
+  try {
+    val x: String = null
+    x.length
+  } catch {
+    case e: Exception => "Some faulty error message"
+  } finally  {
+
+  }
+
+  //generics are used for templating
+  abstract class MyList[T](value:T) {
+    def head: T
+    def tail: MyList[T]
+  }
+
+  val aList: List[Int] = List(1,2,3)
+  println(aList, aList.head, aList.tail)
+
+  class Box[T](value: T) {
+    def getValue: T = value
+  }
+
+  val intBox = new Box[Int](42)
+  val stringValue = new Box[String]("Hello, Generics!")
+
+  println(intBox.getValue) // Output: 42
+  println(stringValue.getValue) // Output: Hello, Generics!
 }
