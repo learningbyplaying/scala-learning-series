@@ -112,6 +112,23 @@ object FunctionalProgramming extends App {
   val aVector = Vector(1,2,3,4,5)
   println(aVector)
 
+  // sets no duplicates
   val aSet = Set(1, 2, 3, 4, 5, 2)
-  println(aSet)
+  println(aSet, aSet.contains(7))
+
+  // ranges
+  val aRange = 1 to 1000
+  val twoByTwo = aRange.map(x => 2 * x).toList
+
+  println(aRange, twoByTwo)
+
+  // tuples
+  val aTuple = ("Bon Jovi","Rock",1982)
+  println(aTuple._1)
+
+  //maps
+  val aPhonebook: Map[String, Int] =
+    Map( ("Daniel",66), "Jane" -> 7 )
+
+  println(aPhonebook)
 }
