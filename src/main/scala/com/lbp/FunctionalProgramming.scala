@@ -131,4 +131,7 @@ object FunctionalProgramming extends App {
     Map( ("Daniel",66), "Jane" -> 7 )
 
   println(aPhonebook)
+
+
+  println( ("Daniel",66), "Jane" -> 7 )
 }
