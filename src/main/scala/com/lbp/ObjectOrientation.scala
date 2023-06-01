@@ -66,4 +66,19 @@ object ObjectOrientation extends App {
   }
 
   dinosaur.eat(aDog)
+
+
+  object MySingleton {
+    val mySpecialValue = 53278
+    def mySpecialMethod():Int = 5327
+    def apply(x: Int): Int = x + 1
+  }
+
+  MySingleton.mySpecialMethod()
+  val a = MySingleton.apply(1)
+  val b = MySingleton(1)
+  val c = MySingleton.mySpecialMethod()
+  print(a,b,c)
+
+
 }
