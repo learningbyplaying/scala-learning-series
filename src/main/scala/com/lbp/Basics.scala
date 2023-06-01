@@ -46,7 +46,5 @@ object Basics extends App {
   println( factorial(3) )
 
 
-  def myUnitReturningFunction(): = {
-    print("Test 2")
-  }
+
 }
