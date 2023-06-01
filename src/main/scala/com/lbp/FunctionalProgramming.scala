@@ -88,4 +88,30 @@ object FunctionalProgramming extends App {
   println(alternativePairs)
 
 
+  /**
+   * Collections
+   */
+
+  val aList = List(1,2,3,4,5)
+  val firstElement = aList.head
+  val rest = aList.tail
+  val aPrependedList = 0 :: aList
+  val anExtendedList = 0 +: aList :+ 6
+
+  println(aList, firstElement, rest)
+
+  println(aList, aPrependedList, anExtendedList)
+
+  val aSequence: Seq[Int] = Seq(1,2,3)
+
+  println(aSequence)
+
+  val accessedElement = aSequence(0)
+  println(accessedElement)
+
+  val aVector = Vector(1,2,3,4,5)
+  println(aVector)
+
+  val aSet = Set(1, 2, 3, 4, 5, 2)
+  println(aSet)
 }
